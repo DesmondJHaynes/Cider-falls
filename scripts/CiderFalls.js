@@ -1,6 +1,7 @@
 // import all modules' functions here.
 import {generateParkArea} from "./parkareas.js"
 import {generateGuests} from "./guests.js"
+import { generateServiceLIst } from "./services.js"
 
 // exports the body of the HTML, invoking modular functions.
 export const CiderFalls = () => {
@@ -10,7 +11,8 @@ export const CiderFalls = () => {
             <h1 id="header__title">Cider Falls Park</h1>
         </header>
         <p class="servicesList">
-            Park services: <span id="services--rafting">rafting, </span><span id="services--canoeing">canoeing, </span><span id="services--fishing">fishing, </span><span id="services--hiking">hiking, </span><span id="services--picnicking">picnicking, </span><span id="services--rockClimbing">rock climbing, </span><span id="services--lodging">lodging, </span><span id="services--parking">parking, </span><span id="services--information">information, </span><span id="services--zipLines">zip lines</span></p>
+            Park services: ${generateServiceLIst()}
+            </p>
         <main>
             <article class="areas">
                 <h2 id="areas__header">Park Areas</h2>

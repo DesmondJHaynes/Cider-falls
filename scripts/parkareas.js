@@ -1,8 +1,10 @@
+import { getParkAreaServices, getParkAreas, getServices } from "./database.js"
+
 const parkAreas = getParkAreas()
 const parkAreaServices = getParkAreaServices()
 const services = getServices()
 
-const generateParkArea = () => {
+export const generateParkArea = () => {
     let html = ``
 
         for (const area of parkAreas) {
@@ -16,7 +18,7 @@ const generateParkArea = () => {
 
             html += '<ul>'
 
-            const serviceIdList = createServiceIdList()
+            const serviceIdList = createServiceIdList(area)
             const serviceList = generateServices(serviceIdList)
             
             html += `${serviceList}</ul></div>`
@@ -24,16 +26,17 @@ const generateParkArea = () => {
     return html
 }
 
-const createServiceIdList = () => {
+const createServiceIdList = (area) => {
+    let serviceIdList = []
+
     for (const parkAreaService of parkAreaServices) {
-        let serviceIdList = []
 
         if (area.id === parkAreaService.areaId) {
             serviceIdList.push(parkAreaService.serviceId)
         } 
-        
-        return serviceIdList
+           
     }
+    return serviceIdList
 }
 
 

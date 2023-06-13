@@ -1,4 +1,6 @@
-const services = getServies()
+import { getServices } from "./database.js"
+
+const services = getServices()
 
 
 document.addEventListener("click", event => {

@@ -11,10 +11,10 @@ export const generateParkArea = () => {
         for (const area of parkAreas) {
             html += `
                 <div class="area-card--${area.id}">
-                <h2 id="area--${area.id}">${area.name}</h2>`
+                <h3 id="area--${area.id}">${area.name}</h3>`
 
             if (area.extra) {
-                html += `<h3 class="area-extra"> Area Attractions: ${area.extra}</h3>`
+                html += `<h4 class="area-extra"> Area Attractions: ${area.extra}</h4>`
             }
 
             html += '<ul>'

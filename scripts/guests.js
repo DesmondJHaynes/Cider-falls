@@ -1,9 +1,10 @@
+import {getGuests} from "./database.js"
+
 
 const guests = getGuests()
 
 
-//option A
-const generateGuests = () => {
+export const generateGuests = () => {
     let html = `<ul>`
     
     const guestList = guests.map((guest)=>{
@@ -11,15 +12,6 @@ const generateGuests = () => {
     })
 
     html += `${guestList.join("")} </ul>`
-}
 
-
-//option B
-const generateGuests1 = () => {
-    
-    const guestList = guests.map((guest)=>{
-        return `<li>${guest.name}</li>`
-    })
-
-    return guestList.join("")
+    return html
 }

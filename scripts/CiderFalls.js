@@ -1,12 +1,12 @@
 // import all modules' functions here.
-import {ParkAreas} from "./parkareas.js"
-import {Guests} from "./guests.js"
+import {generateParkArea} from "./parkareas.js"
+import {generateGuests} from "./guests.js"
 
 // exports the body of the HTML, invoking modular functions.
 export const CiderFalls = () => {
     return `
         <header class="header">
-            <img id="header__logo" src="https://cdn.freebiesupply.com/logos/large/2x/jurassic-world-2-logo-png-transparent.png">
+            <img id="header__logo" src="">
             <h1 id="header__title">Cider Falls Park</h1>
         </header>
         <p class="servicesList">
@@ -15,13 +15,13 @@ export const CiderFalls = () => {
             <article class="areas">
                 <h2 id="areas__header">Park Areas</h2>
                 <div class="areas__boxes">
-                    ${ParkAreas}
+                    ${generateParkArea()}
                 </div>
             </article>
             <aside class="guestList">
                 <h3 id="guestList__header">Current Park Guests</h2>
                 <div class="guestList__list">
-                    ${Guests}
+                    ${generateGuests()}
                 </div>
             </aside>
         </main>

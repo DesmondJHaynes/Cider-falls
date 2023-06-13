@@ -30,16 +30,16 @@ const database = {
         {id: 6, name: "Pine Bluffs Trails", extra: "Food Vendors"}
     ],
     services: [
-        {id: 1, name: "rafting"},
-        {id: 2, name: "canoeing"},
-        {id: 3, name: "fishing"},
-        {id: 4, name: "hiking"},
-        {id: 5, name: "picnicking"},
-        {id: 6, name: "rock climbing"},
-        {id: 7, name: "lodging"},
-        {id: 8, name: "parking"},
-        {id: 9, name: "information"},
-        {id: 10, name: "zip lines"}
+        {id: 1, name: "Rafting"},
+        {id: 2, name: "Canoeing"},
+        {id: 3, name: "Fishing"},
+        {id: 4, name: "Hiking"},
+        {id: 5, name: "Picnicking"},
+        {id: 6, name: "Rock climbing"},
+        {id: 7, name: "Lodging"},
+        {id: 8, name: "Parking"},
+        {id: 9, name: "Information"},
+        {id: 10, name: "Zip lines"}
     ],
     parkAreaServices: [
         {id: 1, areaId: 1, serviceId: 1},

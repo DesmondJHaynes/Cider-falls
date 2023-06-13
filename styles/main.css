@@ -1,15 +1,44 @@
 /* Insert typography, background, etc. here */
 
+
+* {
+    /* border: solid red 1px; */
+    list-style: none;
+    font-family: 'Bespoke Serif', serif;
+}
+
+body {
+    background-image: url("/images/waterfalls.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
 .header {
     display: flex;
+    /* background-color: #5d714d; */
+    justify-content: center;
 }
 
 #header__logo {
-    width: 100px;
+    width: 150px;
+    margin-right: 1em;
+    margin-left: 1em
+}
+
+#header__title {
+    color: black;
+    font-size: 65px;
+    margin-bottom: 0;
 }
 
 .servicesList {
     text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    /* background-color: rgb(255, 247, 231, .35); */
+    text-shadow: 0px 0px 12px white;
+    border-radius: 5px;
 }
 
 main {
@@ -17,21 +46,72 @@ main {
 }
 
 .areas {
-    flex-basis: 75%;
+    flex-basis: 85%;
     text-align: center;
 }
 
-#areas__boxes {
+#areas__header {
+    text-align: left;
+    margin-left: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    font-size: 50px;
+    font-style: bold;
+}
+
+.areas__boxes {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.area-card--1,
+.area-card--2,
+.area-card--3,
+.area-card--4,
+.area-card--5,
+.area-card--6 {
+    flex-basis: 30%;
+    /* border: solid; */
+    border-radius: 10px;
+    margin: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    min-height: 200px;
+    text-align: center;
+    background-color: rgb(255, 247, 231, .7);
+    box-shadow: 0px 0px 20px rgb(255, 247, 231, .40);
+    /* opacity: 60%; */
+}
+
+#area--1,
+#area--2,
+#area--3,
+#area--4,
+#area--5,
+#area--6 {
+    font-size: 25px;
+}
+
+ul {
+    /* border: solid; */
+    padding: 0;
 }
 
 .guestList {
-    text-align: center;
+    text-align: right;
+    background-color: rgb(255, 247, 231, .7);
+    box-shadow: 0px 0px 20px rgb(255, 247, 231, .40);
+    border-radius: 10px;
+    padding: 1em
 }
 
 footer {
     text-align: center;
+    padding-top: 2em;
+    color: aliceblue;
 }
 
 #footer__heading {

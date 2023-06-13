@@ -1,8 +1,9 @@
-import { getParkAreaServices, getParkAreas, getServices } from "./database.js"
+import { getGuests, getParkAreaServices, getParkAreas, getServices } from "./database.js"
 
 const parkAreas = getParkAreas()
 const parkAreaServices = getParkAreaServices()
 const services = getServices()
+const guests = getGuests()
 
 export const generateParkArea = () => {
     let html = ``
@@ -49,3 +50,26 @@ const generateServices = (serviceIdList) => {
     }
     return html
 }
+
+
+document.addEventListener("click", event => {
+    if (event.target.id.startsWith("area--")) {
+        const [,areaId] = event.target.id.split("--")
+        
+        let guestlist = []
+
+        for (const guest of guests) {
+            if (parseInt(areaId) === guest.areaId) {
+                guestlist.push(guest)
+            }
+        }
+
+        const numberOfGuest = guestlist.length;
+        window.alert(`There are ${numberOfGuest} guests here!`)
+    }
+})
+
+
+
+// click area 
+// display number of guests in area

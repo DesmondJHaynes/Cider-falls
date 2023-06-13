@@ -1,0 +1,43 @@
+/* Insert typography, background, etc. here */
+
+.header {
+    display: flex;
+}
+
+#header__logo {
+    width: 100px;
+}
+
+.servicesList {
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+.areas {
+    flex-basis: 75%;
+    text-align: center;
+}
+
+#areas__boxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guestList {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+#footer__heading {
+    margin:.25em
+}
+
+.footer__info {
+    margin: .25em
+}
